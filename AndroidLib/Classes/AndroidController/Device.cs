@@ -50,22 +50,6 @@ namespace RegawMOD.Android
                 }
             }
 
-            if (state == null)
-            {
-                using (StringReader r = new StringReader(Fastboot.Devices()))
-                {
-                    string line;
-
-                    while (r.Peek() != -1)
-                    {
-                        line = r.ReadLine();
-
-                        if (line.Contains(this.serialNumber))
-                            state = line.Substring(line.IndexOf('\t') + 1);
-                    }
-                }
-            }
-
             switch (state)
             {
                 case "device":
@@ -146,20 +130,6 @@ namespace RegawMOD.Android
         /// Gets a value indicating if the device has root
         /// </summary>
         public bool HasRoot { get { return this.su.Exists; } }
-
-        /// <summary>
-        /// Reboots the device regularly from fastboot
-        /// </summary>
-        public void FastbootReboot()
-        {
-            if (this.State == DeviceState.FASTBOOT)
-                new Thread(new ThreadStart(FastbootRebootThread)).Start();
-        }
-
-        private void FastbootRebootThread()
-        {
-            Fastboot.ExecuteFastbootCommandNoReturn(Fastboot.FormFastbootCommand(this, "reboot"));
-        }
 
         /// <summary>
         /// Reboots the device regularly

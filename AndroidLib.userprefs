@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="AndroidLib.Test/AndroidLib.Test.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AndroidLib.Test/Program.cs">
+    <Files>
+      <File FileName="AndroidLib/Classes/AndroidController/AndroidController.cs" Line="116" Column="9" />
+      <File FileName="AndroidLib/Classes/AndroidController/Adb.cs" Line="88" Column="30" />
+      <File FileName="AndroidLib/Classes/AndroidController/Device.cs" Line="195" Column="47" />
+      <File FileName="AndroidLib/Classes/Util/Command.cs" Line="38" Column="40" />
+      <File FileName="AndroidLib/Classes/AndroidController/FileSystem.cs" Line="218" Column="1" />
+      <File FileName="AndroidLib.Test/Program.cs" Line="24" Column="61" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Additional/GitHub/AndroidLib/AndroidLib.Test/Program.cs" line="26" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../DisaOpenSource/Disa.Framework.Telegram/SharpMTProto/Authentication/AuthKeyNegotiator.cs" line="447" offsetX="756" offsetY="7136" expression="resPQ.ServerPublicKeyFingerprints[0]" liveUpdate="False" />
+    <Watch file="../DisaOpenSource/Disa.Framework.Telegram/SharpMTProto/Authentication/AuthKeyNegotiator.cs" line="447" offsetX="756" offsetY="7136" expression="resPQ.ServerPublicKeyFingerprints[0]" liveUpdate="False" />
+    <Watch file="../DisaOpenSource/Disa.Framework/BubbleGroupFactory.cs" line="530" offsetX="293" offsetY="7935" expression="ex" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

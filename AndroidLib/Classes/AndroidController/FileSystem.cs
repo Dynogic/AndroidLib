@@ -182,8 +182,8 @@ namespace RegawMOD.Android
         /// <para>Returns ListingType.NONE if file/Directory does not exist</para></remarks>
         public ListingType FileOrDirectory(string location)
         {
-            if (!this.device.BusyBox.IsInstalled)
-                return ListingType.ERROR;
+//            if (!this.device.BusyBox.IsInstalled)
+//                return ListingType.ERROR;
 
             AdbCommand isFile = Adb.FormAdbShellCommand(this.device, false, string.Format(IS_FILE, location));
             AdbCommand isDir = Adb.FormAdbShellCommand(this.device, false, string.Format(IS_DIRECTORY, location));
@@ -194,6 +194,18 @@ namespace RegawMOD.Android
                 return ListingType.DIRECTORY;
 
             return ListingType.NONE;
+        }
+
+        public bool MakeDirectory(string directory)
+        {
+            AdbCommand mkDir = Adb.FormAdbShellCommand(this.device, false, "mkdir", "\"" + directory + "\"");
+            return !Adb.ExecuteAdbCommand(mkDir).Contains("File exists");
+        }
+
+        public void Delete(string path)
+        {
+            AdbCommand mkDir = Adb.FormAdbShellCommand(this.device, false, "rm", "-rf", "\"" + path + "\"");
+            Adb.ExecuteAdbCommand(mkDir);
         }
 
         /// <summary>

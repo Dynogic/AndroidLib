@@ -132,6 +132,12 @@ namespace RegawMOD.Android
             return new AdbCommand(shellCommand);
         }
 
+        private static string GetAdb()
+        {
+            var h = Environment.OSVersion.Platform == PlatformID.Unix;
+            return h ? ADB : ADB_EXE;
+        }
+
         /// <summary>
         /// Opens Adb Shell and allows input to be typed directly to the shell.  Experimental!
         /// </summary>
@@ -143,7 +149,7 @@ namespace RegawMOD.Android
         {
             lock (_lock)
             {
-                Command.RunProcessWriteInput(AndroidController.Instance.ResourceDirectory + ADB_EXE, "shell", inputLines);
+                Command.RunProcessWriteInput(GetAdb(), "shell", inputLines);
             }
         }
 
@@ -158,7 +164,7 @@ namespace RegawMOD.Android
         {
             lock (_lock)
             {
-                Command.RunProcessWriteInput(AndroidController.Instance.ResourceDirectory + ADB_EXE, "shell", timeout, inputLines);
+                Command.RunProcessWriteInput(GetAdb(), "shell", timeout, inputLines);
             }
         }
 
@@ -175,7 +181,7 @@ namespace RegawMOD.Android
 
             lock (_lock)
             {
-                result = Command.RunProcessReturnOutput(AndroidController.Instance.ResourceDirectory + ADB_EXE, command.Command, forceRegular, command.Timeout);
+                result = Command.RunProcessReturnOutput(GetAdb(), command.Command, forceRegular, command.Timeout);
             }
 
             return result;
@@ -191,7 +197,7 @@ namespace RegawMOD.Android
         {
             lock (_lock)
             {
-                Command.RunProcessNoReturn(AndroidController.Instance.ResourceDirectory + ADB_EXE, command.Command, command.Timeout);
+                Command.RunProcessNoReturn(GetAdb(), command.Command, command.Timeout);
             }
         }
 
@@ -206,7 +212,7 @@ namespace RegawMOD.Android
 
             lock (_lock)
             {
-                result = Command.RunProcessReturnExitCode(AndroidController.Instance.ResourceDirectory + ADB_EXE, command.Command, command.Timeout);
+                result = Command.RunProcessReturnExitCode(GetAdb(), command.Command, command.Timeout);
             }
 
             return result;

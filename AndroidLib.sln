@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidLib", "AndroidLib\AndroidLib.csproj", "{F5F92F16-C783-4B17-B725-B06F1D725B9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidLib.Test", "AndroidLib.Test\AndroidLib.Test.csproj", "{E9A13805-A656-421F-B216-B1E553DE7442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,18 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Debug|x86.Build.0 = Debug|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9A13805-A656-421F-B216-B1E553DE7442}.Release|x86.Build.0 = Release|Any CPU
 		{F5F92F16-C783-4B17-B725-B06F1D725B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5F92F16-C783-4B17-B725-B06F1D725B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5F92F16-C783-4B17-B725-B06F1D725B9C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
